@@ -1,0 +1,37 @@
+{
+  "name": "manual-typescript",
+  "version": "1.0.1",
+  "description": "TypeScript 是微软开发的 JavaScript 超集。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gitbook serve ./ ./book"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuriv/manual-typescript.git"
+  },
+  "keywords": [
+    "typescript",
+    "typescript-framework",
+    "typescript-library",
+    "typescript-sdk",
+    "typescript2"
+  ],
+  "author": "Kuriv Vesti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuriv/manual-typescript/issues"
+  },
+  "homepage": "https://github.com/kuriv/manual-typescript#readme",
+  "dependencies": {
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-chapter-fold": "0.0.4",
+    "gitbook-plugin-favicon": "0.0.2",
+    "gitbook-plugin-hide-element": "0.0.4",
+    "gitbook-plugin-lightbox": "^1.2.0",
+    "gitbook-plugin-prism": "^2.4.0",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-splitter": "0.0.8"
+  }
+}
