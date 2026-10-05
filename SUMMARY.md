@@ -2,4 +2,15 @@
 
 * [TypeScript](README.md)
     * [全局安装](docs/全局安装.md)
+    * [文件编译](docs/文件编译.md)
+    * [类型批注](docs/类型批注.md)
+    * [类型断言](docs/类型断言.md)
+    * [类型别名](docs/类型别名.md)
+    * [函数重载](docs/函数重载.md)
+    * [方法重写](docs/方法重写.md)
+    * [对象使用](docs/对象使用.md)
+    * [抽象类](docs/抽象类.md)
+    * [接口](docs/接口.md)
+    * [泛型约束](docs/泛型约束.md)
+    * [装饰器](docs/装饰器.md)
 
