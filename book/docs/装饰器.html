@@ -74,8 +74,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="命名空间.html" />
     
-    <link rel="prev" href="泛型约束.html" />
+    
+    <link rel="prev" href="索引类型.html" />
     
 
     
@@ -278,12 +280,64 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.12" data-path="装饰器.html">
+        <li class="chapter " data-level="1.1.12" data-path="泛型工具.html">
+            
+                <a href="泛型工具.html">
+            
+                    
+                    泛型工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="条件类型.html">
+            
+                <a href="条件类型.html">
+            
+                    
+                    条件类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="索引类型.html">
+            
+                <a href="索引类型.html">
+            
+                    
+                    索引类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.15" data-path="装饰器.html">
             
                 <a href="装饰器.html">
             
                     
                     装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="命名空间.html">
+            
+                <a href="命名空间.html">
+            
+                    
+                    命名空间
             
                 </a>
             
@@ -344,8 +398,10 @@
                                 <h1 id="&#x88C5;&#x9970;&#x5668;">&#x88C5;&#x9970;&#x5668;</h1>
 <p>&#x88C5;&#x9970;&#x5668;&#x672C;&#x8D28;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x4FEE;&#x6539;&#x539F;&#x7C7B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">function</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token operator">:</span> <span class="token builtin">Function</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
-    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    target<span class="token punctuation">.</span>func <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token builtin">string</span></span> <span class="token operator">=&gt;</span> <span class="token string">&apos;Hello World!&apos;</span><span class="token punctuation">;</span>
     target<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>func <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token builtin">string</span></span> <span class="token operator">=&gt;</span> <span class="token string">&apos;Hello TypeScript!&apos;</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 @func
 <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
@@ -355,32 +411,32 @@
         <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">let</span> Tom<span class="token operator">:</span> Person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">&apos;Tom&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Tom<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Tom<span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x82E5;&#x88C5;&#x9970;&#x5668;&#x51FD;&#x6570;&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5219;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x7C7B;&#x4E0D;&#x4F1A;&#x88AB;&#x66FF;&#x6362;&#xFF0C;&#x82E5;&#x88C5;&#x9970;&#x5668;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x65B0;&#x7684;&#x7C7B;&#xFF0C;&#x5219;&#x65B0;&#x7C7B;&#x5C06;&#x66FF;&#x6362;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x7C7B;&#x3002;</p>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">function</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token operator">:</span> <span class="token builtin">Function</span></span><span class="token punctuation">)</span><span class="token operator">:</span> object <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token punctuation">{</span>
-        <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Demo <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token function">func2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
             <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Hello TypeScript!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 @func
 <span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
-    <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">func1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
         <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Hello World!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">let</span> obj<span class="token operator">:</span> Demo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-obj<span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span><span class="token function">func1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span><span class="token function">func2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x88C5;&#x9970;&#x5668;&#x5DE5;&#x5382;&#x662F;&#x8FD4;&#x56DE;&#x88C5;&#x9970;&#x5668;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x5165;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">function</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">num<span class="token operator">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Function</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token operator">:</span> <span class="token builtin">Function</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
-        target<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">func</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+        target<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>func <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">while</span> <span class="token punctuation">(</span>num <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Hello TypeScript!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                 num<span class="token operator">--</span><span class="token punctuation">;</span>
@@ -390,26 +446,13 @@ obj<span class="token punctuation">.</span><span class="token function">func</sp
 <span class="token punctuation">}</span>
 @<span class="token function">func</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
 <span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
-    <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
         <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Hello World!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">let</span> obj<span class="token operator">:</span> Demo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 obj<span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;</p>
-<p>&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;</p>
-<pre class="language-"><code class="lang-typescript"><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-
-&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;
-
-&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;
-
-
-
-</span><span class="token template-punctuation string">`</span></span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span>typescript
-</code></pre>
-<p>&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;</p>
 
                                 
                                 </section>
@@ -437,10 +480,14 @@ obj<span class="token punctuation">.</span><span class="token function">func</sp
 
             
                 
-                <a href="泛型约束.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 泛型约束">
+                <a href="索引类型.html" class="navigation navigation-prev " aria-label="Previous page: 索引类型">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="命名空间.html" class="navigation navigation-next " aria-label="Next page: 命名空间">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -449,7 +496,7 @@ obj<span class="token punctuation">.</span><span class="token function">func</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"装饰器","level":"1.1.12","depth":2,"previous":{"title":"泛型约束","level":"1.1.11","depth":2,"path":"docs/泛型约束.md","ref":"docs/泛型约束.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"TypeScript","language":"zh-hans","gitbook":">=3.0.0","description":"TypeScript 手册","direction":"ltr"},"file":{"path":"docs/装饰器.md","mtime":"2026-10-05T17:57:53.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-10-05T17:58:18.407Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"装饰器","level":"1.1.15","depth":2,"next":{"title":"命名空间","level":"1.1.16","depth":2,"path":"docs/命名空间.md","ref":"docs/命名空间.md","articles":[]},"previous":{"title":"索引类型","level":"1.1.14","depth":2,"path":"docs/索引类型.md","ref":"docs/索引类型.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"TypeScript","language":"zh-hans","gitbook":">=3.0.0","description":"TypeScript 手册","direction":"ltr"},"file":{"path":"docs/装饰器.md","mtime":"2026-10-13T13:00:20.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-10-13T15:57:11.259Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
