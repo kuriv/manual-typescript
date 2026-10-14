@@ -319,12 +319,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.15" data-path="装饰器.html">
+        <li class="chapter " data-level="1.1.15" data-path="命名空间.html">
             
-                <a href="装饰器.html">
+                <a href="命名空间.html">
             
                     
-                    装饰器
+                    命名空间
             
                 </a>
             
@@ -332,12 +332,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.16" data-path="命名空间.html">
+        <li class="chapter " data-level="1.1.16" data-path="装饰器.html">
             
-                <a href="命名空间.html">
+                <a href="装饰器.html">
             
                     
-                    命名空间
+                    装饰器
             
                 </a>
             
@@ -444,12 +444,7 @@ obj <span class="token operator">=</span> <span class="token punctuation">{</spa
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tuple<span class="token punctuation">,</span> <span class="token keyword">typeof</span> tuple<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6279;&#x6CE8;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x679A;&#x4E3E;&#x7684;&#x503C;&#x4ECE; 0 &#x5F00;&#x59CB;&#x9012;&#x589E;&#x3002;</p>
-<pre class="language-"><code class="lang-typescript"><span class="token keyword">enum</span> direction <span class="token punctuation">{</span>
-    up<span class="token punctuation">,</span>
-    down<span class="token punctuation">,</span>
-    left<span class="token punctuation">,</span>
-    right
-<span class="token punctuation">}</span>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">enum</span> direction <span class="token punctuation">{</span> up<span class="token punctuation">,</span> down<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right <span class="token punctuation">}</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>direction<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">let</span> up<span class="token operator">:</span> direction <span class="token operator">=</span> direction<span class="token punctuation">.</span>up<span class="token punctuation">;</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>up<span class="token punctuation">,</span> <span class="token keyword">typeof</span> up<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -461,11 +456,11 @@ obj <span class="token operator">=</span> <span class="token punctuation">{</spa
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>right<span class="token punctuation">,</span> <span class="token keyword">typeof</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6279;&#x6CE8;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#xFF0C;&#x6EE1;&#x8DB3;&#x5176;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x5373;&#x53EF;&#x3002;</p>
-<pre class="language-"><code class="lang-typescript"><span class="token keyword">let</span> foo<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
-foo <span class="token operator">=</span> <span class="token number">233</span><span class="token punctuation">;</span>
-<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">,</span> <span class="token keyword">typeof</span> foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
-foo <span class="token operator">=</span> <span class="token string">&apos;Hello TypeScript!&apos;</span><span class="token punctuation">;</span>
-<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">,</span> <span class="token keyword">typeof</span> foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">let</span> union<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+union <span class="token operator">=</span> <span class="token number">233</span><span class="token punctuation">;</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>union<span class="token punctuation">,</span> <span class="token keyword">typeof</span> union<span class="token punctuation">)</span><span class="token punctuation">;</span>
+union <span class="token operator">=</span> <span class="token string">&apos;Hello TypeScript!&apos;</span><span class="token punctuation">;</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>union<span class="token punctuation">,</span> <span class="token keyword">typeof</span> union<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6279;&#x6CE8;&#x4EA4;&#x53C9;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#xFF0C;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x8981;&#x6C42;&#x3002;</p>
 <pre class="language-"><code class="lang-typescript"><span class="token keyword">let</span> obj<span class="token operator">:</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span> <span class="token operator">&amp;</span> <span class="token punctuation">{</span> age<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -547,7 +542,7 @@ foo <span class="token operator">=</span> <span class="token string">&apos;Hello
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"类型批注","level":"1.1.3","depth":2,"next":{"title":"类型断言","level":"1.1.4","depth":2,"path":"docs/类型断言.md","ref":"docs/类型断言.md","articles":[]},"previous":{"title":"文件编译","level":"1.1.2","depth":2,"path":"docs/文件编译.md","ref":"docs/文件编译.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"TypeScript","language":"zh-hans","gitbook":">=3.0.0","description":"TypeScript 手册","direction":"ltr"},"file":{"path":"docs/类型批注.md","mtime":"2026-10-13T08:27:21.423Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-10-13T15:57:11.259Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"类型批注","level":"1.1.3","depth":2,"next":{"title":"类型断言","level":"1.1.4","depth":2,"path":"docs/类型断言.md","ref":"docs/类型断言.md","articles":[]},"previous":{"title":"文件编译","level":"1.1.2","depth":2,"path":"docs/文件编译.md","ref":"docs/文件编译.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","favicon","hide-element","lightbox","-highlight","prism","-lunr","-search","search-pro","splitter","livereload"],"root":"","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.png","appleTouchMore":{"120x120":"favicon-120x120.png","180x180":"favicon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kuriv Vesti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"TypeScript","language":"zh-hans","gitbook":">=3.0.0","description":"TypeScript 手册","direction":"ltr"},"file":{"path":"docs/类型批注.md","mtime":"2026-10-14T12:45:00.916Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-10-14T15:13:51.461Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
